@@ -54,7 +54,7 @@ button{
 </div>
 
 <div class="card">
-<h3>💰 Coin Balance: <span id="balance">0</span> PKR</h3>
+<h3 id="balance">💰 Coin Balance: 0 PKR</h3>
 </div>
 
 <div class="card">
@@ -64,7 +64,7 @@ button{
 <button onclick="watchVideo()">▶ Watch Video</button>
 
 <div class="card">
-<h3>💵 Today's Earnings: <span id="earnings">0</span> PKR</h3>
+<h3>💵 Today's Earnings: <span id="earning">0</span> PKR</h3>
 </div>
 
 <button class="withdraw" onclick="window.location.href='payment.html'">🏧 Withdrawal (Minimum 10000 PKR)</button>
@@ -73,13 +73,16 @@ button{
   <script>
 function watchVideo() {
     window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
-
+let balance = parseInt(localStorage.getItem("balance")) || 0;
+balance += 10;
+localStorage.setItem("balance", balance);
     setTimeout(function () {
-      let balance = document.getElementById("balance");
-let earnings = document.getElementById("earnings");
+      document.getElementById("balance").innerHTML =
+"💰 Coin Balance: " + balance + " PKR";
 
-balance.innerHTML = parseInt(balance.innerHTML) + 10;
-earnings.innerHTML = parseInt(earnings.innerHTML) + 10;  alert("Video completed! You earned PKR 10.");
+document.getElementById("earnings").innerHTML = balance;
+
+alert("Video completed! You earned 10 PKR");
     }, 10000);
 }
 </script>
