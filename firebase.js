@@ -7,8 +7,7 @@ const firebaseConfig = {
   projectId: "work-with-home-3cbc8",
   storageBucket: "work-with-home-3cbc8.firebasestorage.app",
   messagingSenderId: "579230440177",
-  appId: "1:579230440177:web:36f7973a2d234d66966750",
-  measurementId: "G-GQZDWRWDGN"
+  appId: "1:579230440177:web:36f7973a2d234d66966750"
 };
 
 const app = initializeApp(firebaseConfig);
