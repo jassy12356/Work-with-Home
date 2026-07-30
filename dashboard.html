@@ -82,9 +82,11 @@ localStorage.setItem("balance", balance);
     setTimeout(function () {
       document.getElementById("balance").innerHTML =
 "💰 Coin Balance: " + balance + " PKR";
+ let earnings = parseInt(localStorage.getItem("earnings")) || 0;
+earnings += 10;
+document.getElementById("earnings").innerHTML = earnings;
 
-document.getElementById("earnings").innerHTML = 10;
-localStorage.setItem("earnings", 10);
+localStorage.setItem("earnings", earnings);
 alert("Video completed! You earned 10 PKR");
     }, 10000);
 }
