@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+</head>
+<body>
+  <h1>Admin Panel</h1>
+
+  <button onclick="approve()">Approve User</button>
+
+  <script>
+    function approve() {
+      localStorage.setItem("approved", "yes");
+      alert("User Approved!");
+    }
+  </script>
+</body>
+</html>
