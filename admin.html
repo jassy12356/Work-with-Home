@@ -4,15 +4,17 @@
   <title>Admin Panel</title>
 </head>
 <body>
-  <h1>Admin Panel</h1>
 
-  <button onclick="approve()">Approve User</button>
+<h2>Admin Panel</h2>
 
-  <script>
-    function approve() {
-      localStorage.setItem("approved", "yes");
-      alert("User Approved!");
-    }
-  </script>
+<button onclick="approve()">Approve Payment</button>
+
+<script>
+function approve() {
+  localStorage.setItem("approved", "yes");
+  alert("Payment Approved");window.location.href = "dashboard.html";
+}
+</script>
+
 </body>
 </html>
