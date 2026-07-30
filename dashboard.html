@@ -73,7 +73,7 @@ button{
   <script>
 let savedBalance = localStorage.getItem("balance") || 0;
 document.getElementById("balance").innerHTML = savedBalance;
-document.getElementById("earnings").innerHTML = savedBalance;
+document.getElementById("earnings").innerHTML = localStorage.getItem("earnings") || 0;
     function watchVideo() {
     window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
 let balance = parseInt(localStorage.getItem("balance")) || 0;
@@ -84,7 +84,7 @@ localStorage.setItem("balance", balance);
 "💰 Coin Balance: " + balance + " PKR";
 
 document.getElementById("earnings").innerHTML = balance;
-
+localStorage.setItem("earnings", balance);
 alert("Video completed! You earned 10 PKR");
     }, 10000);
 }
