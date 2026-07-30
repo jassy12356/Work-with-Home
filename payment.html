@@ -46,16 +46,20 @@ button{
 <div class="container">
 <h1>Payment</h1>
 
-<p><b>Payment Method:</b> Raast (EasyPaisa)</p>
+<p><b>Payment Method:</b>input Raast (EasyPaisa)</p>
 
 <p><b>Account Title:</b> TAYYAB </p>
 
 <p><b>Raast IBAN:</b> PK45TMFB0000000093173459</p>
 <h3>Upload Payment Screenshot</h3>
 
-<input type="file">
+<form action="https://formspree.io/f/xlgqvkej" method="POST" enctype="multipart/form-data">
 
-<button>Submit Payment</button>
+  <input type="file" name="payment_screenshot" required>
+
+  <button type="submit">Submit Payment</button>
+
+</form>
 
 </div>
 
