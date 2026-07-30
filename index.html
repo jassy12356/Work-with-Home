@@ -1,71 +1,141 @@
- 
-<!DOCTYPE html>
-<html>
+ <!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Work From Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work With Home</title>
+
+<link rel="stylesheet" href="css/style.css">
 
 <style>
-body{
-font-family:Arial;
-background:#f2f2f2;
-text-align:center;
-padding:20px;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
-.container{
-background:#fff;
-max-width:400px;
-margin:auto;
+
+body{
+background:#f5f7fb;
+}
+
+header{
+background:#0d6efd;
+color:#fff;
+padding:18px;
+text-align:center;
+}
+
+.hero{
+padding:40px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:32px;
+margin-bottom:15px;
+color:#222;
+}
+
+.hero p{
+font-size:17px;
+color:#555;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+background:#0d6efd;
+color:white;
+text-decoration:none;
+border-radius:8px;
+margin:10px;
+font-size:18px;
+}
+
+.btn:hover{
+background:#084298;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:30px;
+}
+
+.card{
+background:white;
 padding:20px;
 border-radius:10px;
-box-shadow:0 0 10px #ccc;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+text-align:center;
 }
-img{
-width:80px;
-border-radius:50%;
+
+.card h3{
+margin-bottom:10px;
 }
-input{
-width:90%;
-padding:10px;
-margin:8px 0;
-}
-button{
-background:green;
+
+footer{
+margin-top:40px;
+background:#111;
 color:white;
-padding:12px;
-border:none;
-border-radius:5px;
-width:95%;
-font-size:18px;
+text-align:center;
+padding:15px;
 }
 </style>
 
 </head>
 <body>
 
-<div class="container">
+<header>
+<h2>Work With Home</h2>
+</header>
 
-<img src="IMG_20260729_220000.jpg">
+<section class="hero">
 
-<h1>Work From Home</h1>
+<h1>Earn Money Online</h1>
 
-<p>Register below to apply.</p>
+<p>
+Watch Daily Videos, Complete Tasks and Earn Daily Income.
+</p>
 
-<form action="payment.html">
+<a href="register.html" class="btn">Register</a>
 
-<input type="text" placeholder="Full Name" required>
+<a href="login.html" class="btn">Login</a>
 
-<input type="email" placeholder="Email" required>
+</section>
 
-<input type="tel" placeholder="Phone Number" required>
+<section class="features">
 
-<button type="submit">
-Register Now
-</button>
-
-</form>
-
+<div class="card">
+<h3>Daily Income</h3>
+<p>Earn every day by watching videos.</p>
 </div>
+
+<div class="card">
+<h3>Fast Withdrawal</h3>
+<p>Withdraw your earnings easily.</p>
+</div>
+
+<div class="card">
+<h3>Secure System</h3>
+<p>Powered by Firebase.</p>
+</div>
+
+<div class="card">
+<h3>24/7 Support</h3>
+<p>We are always here to help.</p>
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Work With Home
+
+</footer>
 
 </body>
 </html>
