@@ -51,11 +51,15 @@ button{
 <p><b>Account Title:</b> TAYYAB </p>
 
 <p><b>Raast IBAN:</b> PK45TMFB0000000093173459</p>
-<h3>Upload Payment Screenshot</h3>
+<h3>Payment Details</h3>
 
-<form action="https://formspree.io/f/xlgqvkej" method="POST" enctype="multipart/form-data">
+<form action="https://formspree.io/f/xlgqvkej" method="POST">
 
-  <input type="file" name="payment_screenshot" required>
+  <input type="text" name="name" placeholder="Your Name" required>
+
+  <input type="email" name="email" placeholder="Your Email" required>
+
+  <input type="text" name="trxid" placeholder="EasyPaisa Transaction ID" required>
 
   <button type="submit">Submit Payment</button>
 
