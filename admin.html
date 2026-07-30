@@ -9,11 +9,34 @@
 
 <button onclick="approve()">Approve Payment</button>
 
-<script>
-function approve() {
-  localStorage.setItem("approved", "yes");
-  alert("Payment Approved");window.location.href = "dashboard.html";
-}
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import {
+  getFirestore,
+  doc,
+  setDoc
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyB4zXHG1QuBiozdZDiQlSGhn_g1_2_Jo58",
+  authDomain: "work-with-home-3cbc8.firebaseapp.com",
+  projectId: "work-with-home-3cbc8",
+  storageBucket: "work-with-home-3cbc8.firebasestorage.app",
+  messagingSenderId: "579230440177",
+  appId: "1:579230440177:web:36f7973a2d234d66966750",
+  measurementId: "G-GQZDWRWDGN"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+window.approve = async function () {
+  await setDoc(doc(db, "Admin", "Admin"), {
+    Approved: true
+  });
+
+  alert("Payment Approved");
+};
 </script>
 
 </body>
