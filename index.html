@@ -43,46 +43,15 @@ border-radius:5px;
 <h1>Work From Home</h1>
 <p>Register below to apply.</p>
 
-<form onsubmit="return checkApproval()">
+<form action="payment.html">
 <input type="text" placeholder="Full Name" required><br>
 <input type="email" placeholder="Email" required><br>
 <input type="tel" placeholder="Phone Number" required><br>
 <button type="submit">Register Now</button>
 </form>
-
-</div><script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import {
-  getFirestore,
-  doc,
-  getDoc
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyB4zXHG1QuBiozdZDiQlSGhn_g1_2_Jo58",
-  authDomain: "work-with-home-3cbc8.firebaseapp.com",
-  projectId: "work-with-home-3cbc8",
-  storageBucket: "work-with-home-3cbc8.firebasestorage.app",
-  messagingSenderId: "579230440177",
-  appId: "1:579230440177:web:36f7973a2d234d66966750",
-  measurementId: "G-GQZDWRWDGN"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-window.checkApproval = async function () {
-  const snap = await getDoc(doc(db, "Admin", "Admin"));
-
-  if (snap.exists() && snap.data().Approved === true) {
-    window.location.href = "plans.html";
-  } else {
-    alert("Payment not approved yet.");
-  }
-
-  return false;
-}
-</script>
+</div>
 
 </body>
 </html>
+
+
