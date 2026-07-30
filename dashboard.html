@@ -91,6 +91,16 @@ alert("Video completed! You earned 10 PKR");
     }, 10000);
 }
 </script>
+<script type="module">
+import { db } from "./firebase.js";
+import { doc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
+const snap = await getDoc(doc(db, "Admin", "Admin"));
+
+if (!snap.exists() || snap.data().Approved !== true) {
+    alert("Your payment is pending.");
+    window.location.href = "payment.html";
+}
+</script>
 </body>
 </html>
