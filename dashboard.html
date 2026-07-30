@@ -61,7 +61,7 @@ button{
 <h3>📹 Daily Videos Available: 1000</h3>
 </div>
 
-<button>▶️ Watch Video</button>
+<button onclick="watchVideo()">▶ Watch Video</button>
 
 <div class="card">
 <h3>💵 Today's Earnings: 0 PKR</h3>
@@ -70,6 +70,15 @@ button{
 <button class="withdraw">🏧 Withdrawal (Minimum 10000 PKR)</button>
 
 </div>
+  <script>
+function watchVideo() {
+    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+
+    setTimeout(function () {
+        alert("Video completed! You earned PKR 10.");
+    }, 10000);
+}
+</script>
 
 </body>
 </html>
