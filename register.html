@@ -6,6 +6,57 @@
 <title>Register - Work With Home</title>
 
 <link rel="stylesheet" href="css/style.css">
+
+<style>
+body{
+background:#f5f5f5;
+}
+
+.container{
+max-width:420px;
+margin:40px auto;
+background:#fff;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,.15);
+}
+
+h2{
+text-align:center;
+margin-bottom:20px;
+color:#0d6efd;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:16px;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#0d6efd;
+color:#fff;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#084298;
+}
+
+p{
+text-align:center;
+margin-top:15px;
+}
+</style>
+
 </head>
 
 <body>
@@ -34,13 +85,19 @@ id="password"
 placeholder="Password"
 required>
 
+<input
+type="password"
+id="confirmPassword"
+placeholder="Confirm Password"
+required>
+
 <button type="submit">
-Register
+Create Account
 </button>
 
 </form>
 
-<p class="center">
+<p>
 Already have an account?
 <a href="login.html">Login</a>
 </p>
